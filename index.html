@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Impresión de Carnets</title>
+    <link rel="stylesheet" href="frontend/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio</h1>
+        <form action="backend/login.php" method="post">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="documento">Documento de identidad:</label>
+            <input type="text" id="documento" name="documento" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
