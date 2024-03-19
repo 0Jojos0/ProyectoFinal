@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Impresión de Carnets</title>
-    <link rel="stylesheet" href="frontend/css/estilos.css">
+    <link rel="stylesheet" href="backend/css/estilos.css">
 </head>
 <body>
     <div class="container">
         <h1>Inicio</h1>
-        <form action="backend/login.php" method="post">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="documento">Documento de identidad:</label>
-            <input type="text" id="documento" name="documento" required>
-            <button type="submit">Ingresar</button>
-        </form>
+        <h2>Seleccione su rol:</h2>
+        <button onclick="showStudentForm()">Estudiante</button>
+        <button onclick="showEmployeeForm()">Funcionario</button>
+        <div id="studentForm" style="display: none;">
+            <form action="backend/login.php" method="post">
+                <label for="email_estudiante">Correo electrónico:</label>
+                <input type="email" id="email_estudiante" name="email" required>
+                <label for="documento_estudiante">Documento de identidad:</label>
+                <input type="text" id="documento_estudiante" name="documento" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+        <div id="employeeForm" style="display: none;">
+            <form action="backend/login.php" method="post">
+                <label for="email_funcionario">Correo electrónico:</label>
+                <input type="email" id="email_funcionario" name="correo" required>
+                <label for="contrasena_funcionario">Contraseña:</label>
+                <input type="password" id="contrasena_funcionario" name="contrasena" required>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
     </div>
+
+    <script>
+        function showStudentForm() {
+            document.getElementById("studentForm").style.display = "block";
+            document.getElementById("employeeForm").style.display = "none";
+        }
+
+        function showEmployeeForm() {
+            document.getElementById("studentForm").style.display = "none";
+            document.getElementById("employeeForm").style.display = "block";
+        }
+    </script>
 </body>
 </html>
