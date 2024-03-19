@@ -26,6 +26,25 @@
             <input type="text" id="rh" name="rh" required>
             <label for="foto">Foto:</label>
             <input type="file" id="foto" name="foto" accept="image/*">
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
+                <?php
+                include("conexion.php");
+
+                // Consulta para obtener los cursos
+                $sql = "SELECT id, nombre FROM cursos";
+                $result = $conn->query($sql);
+
+                // Mostrar opciones de cursos en un select
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row['id'] . "'>" . $row['nombre'] . "</option>";
+                    }
+                } else {
+                    echo "<option value=''>No hay cursos disponibles</option>";
+                }
+                ?>
+            </select>
             <button type="submit">Guardar</button>
         </form>
     </div>
