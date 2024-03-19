@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudiante - Impresión de Carnet</title>
-    <link rel="stylesheet" href="frontend/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div class="container">
         <h1>Estudiante</h1>
-        <form action="guardar.php" method="post">
+        <form action="guardar.php" method="post" enctype="multipart/form-data">
             <label for="nombre_completo">Nombre completo:</label>
             <input type="text" id="nombre_completo" name="nombre_completo" required>
             <label for="apellido_completo">Apellido completo:</label>

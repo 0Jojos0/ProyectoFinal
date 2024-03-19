@@ -37,7 +37,7 @@ while ($row = $result->fetch_assoc()) {
 
     // Imagen del estudiante
     if ($row["foto"] != "") {
-        $pdf->Image($row["foto"], 10, 20, 40, 40);
+        $pdf->Image($row["foto"], 100, 20, 85, 105);
     }
 
     $pdf->SetTextColor(0, 128, 0);

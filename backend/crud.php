@@ -15,7 +15,7 @@ $sql = "SELECT id, nombre_completo, apellido_completo, documento, tipo_documento
 $result = $conn->query($sql);
 
 echo "<table>";
-echo "<tr><th>Nombre completo</th><th>Apellido completo</th><<th>Documento</th><th>Tipo documento</th><th>RH</th><th>Acciones</th></tr>";
+echo "<tr><th>Nombre completo</th><th>Apellido completo</th><th>Documento</th><th>Tipo documento</th><th>RH</th><th>Acciones</th></tr>";
 while ($row = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>" . $row["nombre_completo"] . "</td>";
